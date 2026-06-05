@@ -1,0 +1,19 @@
+{
+  "outputDirectory": ".",
+  "functions": {
+    "api/*.js": {
+      "maxDuration": 60,
+      "includeFiles": "**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    },
+    {
+      "source": "(.*)",
+      "destination": "/src/public/index.html"
+    }
+  ]
+}
